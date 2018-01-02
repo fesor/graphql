@@ -1,0 +1,23 @@
+{
+    "name": "fesor/graphql",
+    "description": "GraphQL for Symfony",
+    "type": "library",
+    "autoload": {
+        "Fesor\\GraphQL\\": "src/"
+    },
+    "require": {
+        "webonyx/graphql-php": "^0.11.5",
+        "symfony/dependency-injection": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Protko",
+            "email": "fesors@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
