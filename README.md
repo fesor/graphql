@@ -1,6 +1,9 @@
 GraphQL for Symfony
 =========================
 
+![](https://scrutinizer-ci.com/g/fesor/graphql/badges/build.png?b=master)
+![]()
+
 This library provides you simple way to implement GraphQL API using it's 
 [schema definition language](https://blog.graph.cool/graphql-sdl-schema-definition-language-6755bcb9ce51).
 

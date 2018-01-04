@@ -6,3 +6,14 @@ build:
         php72:
             environment:
                 php: 7.2
+            tests:
+                override:
+                    -
+                        command: 'vendor/bin/phpunit --coverage-clover=coverage'
+                        coverage:
+                            file: 'coverage'
+                            format: 'clover'
+checks:
+    php:
+        code_rating: true
+        duplication: true
