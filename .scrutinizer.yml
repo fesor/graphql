@@ -1,0 +1,8 @@
+build:
+    nodes:
+        php71:
+            environment:
+                php: 7.1
+        php72:
+            environment:
+                php: 7.2
