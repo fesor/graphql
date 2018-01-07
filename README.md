@@ -34,17 +34,20 @@ It could retrieve values of fields from both arrays and objects. If object is gi
 then it would be called. You could also process arguments for given field.
 
 For example, in parent resolver we returned user profile object, which should have `userPic` field. We also want to specify
-size of picture in order to generate thumbnail. Then we could just add method `userPic($args)` or `getUserPic($args)` in our
-object:
+size of picture in order to generate thumbnail. Then we could just add method `userPic(int $width, int $height)` or 
+`getUserPic(int $width, int $height)` in our object:
 
 ```php
 class UserProfile
 {
     // ...
-    public function userPic(array $args): Thumb
+    public function userPic(int $width, int $height): Thumb
     {
-        ['width' => $width, 'height' => $height] = $args;
         return Thumb::forImage($this->userPic, $width, $height);
     }
 }
 ```
+
+### Argument Resolution
+
+

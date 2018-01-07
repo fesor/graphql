@@ -15,8 +15,8 @@ final class MethodResolver
         $this->method = $method;
     }
 
-    public function __invoke($source, $args, $context, ResolveInfo $info)
+    public function __invoke($source, $args, ResolveInfo $info)
     {
-        return $this->service->{$this->method}($source, $args, $context, $info);
+        return $this->service->{$this->method}($source, $args, $info);
     }
 }
