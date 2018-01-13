@@ -29,7 +29,7 @@ class DefaultResolverTest extends TestCase
             'bar' => 'bar'
         ];
 
-        $this->assertEquals('bar', ($this->resolver)($source, $args, 'context', $resolveInfo));
+        $this->assertEquals('bar', ($this->resolver)($source, $args, $resolveInfo));
     }
 
     public function sourceWithDifferentAccessorsProvider()
@@ -72,7 +72,7 @@ class DefaultResolverTest extends TestCase
             'foo' => 'foo',
             'bar' => 'bar',
         ];
-        $this->assertEquals('foo', ($this->resolver)($source, $args, 'context', $resolveInfo));
+        $this->assertEquals('foo', ($this->resolver)($source, $args, $resolveInfo));
     }
 
     public function sourceWithDifferentSignaturesProvider()
@@ -126,6 +126,6 @@ class DefaultResolverTest extends TestCase
 
         $this->expectException(UnableToResolveArgument::class);
         $this->expectExceptionMessage("Unable to resolve value for 'baz'");
-        ($this->resolver)($source, $args, 'context', $resolveInfo);
+        ($this->resolver)($source, $args, $resolveInfo);
     }
 }

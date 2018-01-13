@@ -12,7 +12,7 @@ final class DefaultResolver
      */
     static $invokeArgumentsMap = [];
 
-    public function __invoke($source, $args, $context, ResolveInfo $info)
+    public function __invoke($source, $args, ResolveInfo $info)
     {
         $fieldName = $info->fieldName;
         if (is_array($source) || $source instanceof \ArrayAccess) {
